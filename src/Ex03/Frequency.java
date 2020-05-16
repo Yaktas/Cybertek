@@ -26,11 +26,8 @@ public class Frequency {
                 if(str.charAt(j) == uniqueValues.charAt(i))
                     count++;
             }
-
             frequencyResult +=""+uniqueValues.charAt(i) + count;
-
         }
-
         return  frequencyResult;
     }
 
