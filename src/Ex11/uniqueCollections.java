@@ -7,13 +7,20 @@ import java.util.Collections;
 public class uniqueCollections {
 
     public static void main(String[] args) {
-        String str = "hellothere";
+        String htr = "hellothere";  // object unmutable
+        ArrayList<String> result = new ArrayList<>();
+        result = uniqueLetters(htr);
+        System.out.println(result);
+        String btr = "bayram";
+        result = uniqueLetters(btr);
+        System.out.println(result);
+    }
 
-        ArrayList<String> list = new ArrayList<>();
-        list.addAll(Arrays.asList(str.split("")));
-        list.removeIf(x->Collections.frequency(list, x)>1); //lamda expressions
-        System.out.println(list);
-
+    public static ArrayList<String> uniqueLetters(String str){
+        ArrayList<String> mylist = new ArrayList<>();
+        mylist.addAll(Arrays.asList(str.split("")));
+        mylist.removeIf(x->Collections.frequency(mylist, x)>1);
+        return mylist;
     }
 }
 
