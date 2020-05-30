@@ -10,7 +10,19 @@ public class GetAlphabet2 {
 
         int count = 0;
 
+        do {
+            if (Character.isAlphabetic(s.charAt(count)))
+                myText += s.charAt(count);
+            else if (Character.isDigit(s.charAt(count)))
+                myNumber += "" + s.charAt(count);
+            else
+                special += "" + s.charAt(count);
+            count++;  // iterator
+        }
+        while ( count < s.length() );
 
+
+/*
         while( count < s.length() ) {
 
             if (Character.isAlphabetic(s.charAt(count)))
@@ -22,7 +34,7 @@ public class GetAlphabet2 {
 
             count++;  // iterator
         }
-
+*/
         System.out.println(myText);
         System.out.println(myNumber);
         System.out.println(special);
