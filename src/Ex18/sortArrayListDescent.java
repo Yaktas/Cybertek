@@ -1,9 +1,11 @@
-package Ex15;
+package Ex18;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class sort {
+public class sortArrayListDescent {
+
+
     public static void main(String[] args) {
 
         int[] arr = {4, 1, 67, 17, 44, 90, 74, 23, 19};
@@ -17,7 +19,7 @@ public class sort {
 
         for(int i = 0; i < arr.length; i++){
 
-            arr[i] = findMinimum(list); //Integer
+            arr[i] = findMax(list); //Integer
             list.remove(Integer.valueOf(arr[i]));
         }
 
@@ -26,13 +28,12 @@ public class sort {
 
     }
 
-    public static int findMinimum(ArrayList<Integer> newList){
+    public static int findMax(ArrayList<Integer> newList){
 
-        int min_value = Integer.MAX_VALUE;
+        int max_value = Integer.MIN_VALUE;
         for(Integer each: newList){
-            min_value = Math.min(min_value,each);
+            max_value = Math.max(max_value,each);
         }
-        return min_value;
+        return max_value;
     }
-
 }
